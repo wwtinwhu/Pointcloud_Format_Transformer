@@ -5,13 +5,9 @@ add_compile_options(-std=c++11)
  
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
-find_package(PCL 1.7 REQUIRED)
- 
-include_directories(
- include
-)
+find_package(PCL REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
 
-link_directories(${PCL_LIBRARY_DIRS})
  
 add_executable(bin2pcd src/bin2pcd.cpp)   
   

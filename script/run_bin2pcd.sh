@@ -1,5 +1,5 @@
-infolder=/media/edward/BackupPlus/Data/kitti-dataset/sequences/10;
+infolder=/media/weitong/Elements/Data/KITTI/data_odometry_velodyne/dataset/sequences/00;
 for file in ${infolder}/velodyne/*.bin
 do 
-	./bin/bin2pcd $file ${infolder}/HDL64/`basename $file .bin`.pcd
+	../bin/bin2pcd $file ${infolder}/pcd/`basename $file .bin`.pcd
 done
